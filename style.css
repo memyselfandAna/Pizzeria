@@ -110,7 +110,7 @@ html, body {
 }
 
 .content-section, .content2-section {
-    margin: 1em;
+    margin: 1em ;
     font-size: 1.2em;
     text-align: justify;
 }
@@ -254,7 +254,7 @@ html, body {
     background-color:rgba(214, 108, 67, 0.688);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
     .grid {
         display: inherit;
         gap: 30px   
@@ -298,7 +298,7 @@ html, body {
 
 }
 
-.shop-item-price {
+.cart-item-price {
     flex-grow: 1;
     color: #333;
     display:grid;
@@ -332,13 +332,11 @@ html, body {
 }
 
 
-.cart-item-ingredients {
-    display:inline-flexbox;
-    /* width: 70%;
-    height: 90%; */
+.item-ingredients {
+    align-self:baseline;
     text-align:justify;
-    font-weight: lighter; 
-    font-size: 1em;
+    /* font-weight: lighter;  */
+    font-size: 1.1em;
     color: #333;
     margin-bottom: 10px;
     padding: 0 10px 0 10px;
@@ -358,16 +356,29 @@ html, body {
     width: 25%;
 }
 
-.cart-item-title {
+/* .cart-item-title {
     color:#333;
     margin-left: .5em;
     font-size: 1.2em;
 }
 
 .cart-item-image {
-    width: 200px;
+    width: 300px;
     height: auto;
     border-radius: 10px;
+} */
+
+figcaption {
+    margin: 10px 0 0 0;
+    font-variant: small-caps;
+    font-family: Lobster;
+    font-weight: bold;
+    font-size: 22px;
+    color: #4f2204;
+}
+
+figure {
+    padding: 5px;
 }
 
 .btn-danger {
@@ -385,8 +396,8 @@ html, body {
 .cart-quantity-input {
     height: 34px;
     width: 50px;
-    border-radius: 5px;
-    border: 1px solid rgba(65, 235, 39, 0.48);
+    border-radius: .3em;
+    border: 2px solid rgba(95, 50, 7, 0.608);
     background-color: bisque;
     color: #333;
     padding: 0;
@@ -427,19 +438,8 @@ html, body {
     font-size: 1.75em;
 }
 
-.d-block w-100 {
-    width: 80%;
-    height: auto;
-}
-
-.carousel-inner {
-    width:60%;
-    max-height: 500px !important;
-
-}
-
-.carousel-inner > .item > img {
-    width: 100%;
-    max-width: 640px;
-    height: auto;
-}
+.content-section .carousel {
+    margin: 0 auto;
+    width: 80% ;
+    max-height:min-content;
+}    
