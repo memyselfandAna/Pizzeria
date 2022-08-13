@@ -39,7 +39,7 @@ html, body {
 
 .nav ul {
     margin: 0;
-    font-size: 3vw;
+    font-size: 40px;
 }
 
 .nav li {
@@ -55,7 +55,7 @@ html, body {
 
 .main nav {
     text-align: center;
-    font-size: 3vw;
+    font-size: 2.1em;
     font-weight: lighter;
     border-bottom: 1px solid rgba(246, 244, 243, 0.344);
 }
@@ -70,7 +70,7 @@ html, body {
 }
 
 .nav .call-button {
-    font-size: 3vw;
+    font-size: .8em;
     
 }
 
@@ -78,6 +78,8 @@ html, body {
 .nav .contact {
     align-self:flex-end;
 }
+
+
 
 /* .contact li {
     color: rgb(246, 242, 238);
@@ -104,14 +106,14 @@ html, body {
 .numele-pizzeriei {
     text-align: center;
     margin:0;
-    font-size: 4vw;
+    font-size: 4em;
     font-family: "booter - zero zero";
     font-weight: normal;
     color:rgb(244, 242, 248)
 }
 
 .numele-pizzeriei-large {
-    font-size: 13vw;
+    font-size: 10em;
 }
 
 .content-section, .content2-section {
@@ -145,7 +147,7 @@ html, body {
     font-weight: normal;
     color:rgb(101, 14, 14);
     text-align:center;
-    font-size: 4vw;
+    font-size: 2.5em;
 
 }
 
@@ -175,8 +177,8 @@ html, body {
 }
 
  .footer-nav img {
-    width: 10vw;
-    /* height: 10vw;      */
+    width: 70px;
+    height: 50px;     
 }
 
 .grid {
@@ -234,8 +236,8 @@ html, body {
     width: 16%;
 }
 
-.item-ingredients {
-    width: 60%;
+.ingrediente {
+    width: 43%;
 }
 
 .gramaj {
@@ -260,11 +262,6 @@ html, body {
     background-color:rgba(214, 108, 67, 0.688);
 }
 
-
-.content-section2 {
-    padding: 5% 10%;
-}
-
 @media only screen and (max-width: 1000px) {
     .grid {
         display: inherit;
@@ -280,7 +277,6 @@ html, body {
     }
 
     .cart-column {
-        flex-wrap: wrap;
         align-items: center;
         border-bottom: 1px solid black;
         margin-right: .5em;
@@ -291,108 +287,110 @@ html, body {
     
 }
 
-/* .shop-items {
+.shop-item {
+    margin: 30px;
+    flex: 0;
+}
+
+.shop-item-title {
+    display: block;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    width: 100%;
+    height: 68%;
+}
+
+.shop-item-details {
+    display:grid;
+    align-items:center;
+    padding: 5px;
+    font-size: 30px;
+    max-width: 500px;
+    min-width: 500px;
+}
+
+.cart-item-price {
+    flex-grow: 1;
+    color: #333;
+    display:grid;
+    min-height: 150px;
+}
+
+.shop-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-} */
+}
 
 .cart-header {
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 20vw;
     color: #333;
- 
 }
 
 .cart-column {
-    display: flex;
-    align-items:center;
+    display:flex;
+    align-items: center;
     border-bottom: 1px solid black;
     margin-right: .5em;
     margin-left: .5em;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin-top: 10px;
 }
 
 .cart-row {
     display:flex;
-    margin-top: 20px ;
-  
+    margin-top: 20px;
 }
 
-.cart-item-row {
-    display:flex;;
-    margin-top: 20px ;
-  
-}
-
-.cart-item-column {
-    display:flex;
-    align-items:flex-start;
-    border-bottom: 1px solid black; 
-    margin-right: .5em;
-    margin-left: .5em;
-    padding-bottom: 20px;
-    margin-top: 10px;
-}
-
-
-.cart-price {
-    color: #333;
-    display:grid;
-    min-height: 5vw;
-}
-
-
-.cart-item-title {
-    flex-grow: 5;
-    width: 15%;
-    font-size: 3vw;
-    color:#333;
-}
-
-.cart-item-price {
-    flex-grow: 1;
-    width: 15%;
-    font-size: 3vw;
-    color:#333;
-}
-
-.cart-item-quantity {
-    flex-grow: 1;
-    width: 15%;
-    font-size: 3vw;
-    color:#333;
-}
 
 .item-ingredients {
     align-self:baseline;
     text-align:justify;
     /* font-weight: lighter;  */
-    font-size: 2vw;
+    font-size:3vw;
     color: #333;
     margin-bottom: 10px;
     padding: 0 10px 0 10px;
 }
 
-@media only screen and (max-width: 1000px) {
-    .item-ingredients {
-    align-self:baseline;
-    text-align:justify;
-    /* font-weight: lighter;  */
-    font-size: 4vw;
-    color: #333;
-    margin-bottom: 10px;
-    padding: 0 10px 0 10px;
-    width: 80%;
-    }
+.content-section2 {
+    padding: 5% 10%;
 }
 
-/* .cart-item-image {
+.cart-item {
+    width: 60%;
+}
+
+.cart-price {
+    width: 15%;
+    font-size: 1.2em;
+    color:#333;
+}
+
+.cart-quantity {
+    width: 15%;
+}
+
+/* .cart-item-title {
+    color:#333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
     width: 300px;
     height: auto;
     border-radius: 10px;
-}  */
+} */
 
 @media (min-width: 40em) {
     /* Bump up size of carousel content */
@@ -444,7 +442,6 @@ figure {
     border: none;
     border-radius: .3em;
     font-weight: bold;
-    
 }
 
 .btn-danger-hover {
@@ -546,36 +543,15 @@ figure {
   .container-sticky-4 {
     display: flex;
     position: sticky;
+    /* width: 15%; */
     text-align: center;
-    top: 4rem;
+    top: 5rem;
     float: left;
+    /* align-self: flex-start; */
     color: #a1816c;
     text-shadow: 1px 1px 2px #d555;
   }
 
-  @media only screen and (max-width: 1000px) {
-    .container-sticky-4 {
-        display:flex; 
-        position: sticky;
-        text-align: center;
-        font-weight: bold;
-        font-size: small;
-        top: 5rem;
-        float: right;
-        color: #a1816c;
-        text-shadow: 1px 1px 2px #d555
-    }
-
-    .container-sticky-4 > p {
-        position:fixed;
-        top: 30rem;
-        margin-block-start:1px;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-    }
-    
-  }
 
   a {
     color: #333;
@@ -589,25 +565,3 @@ figure {
   .carousel > h2 {
     margin: 30px;
   }
-
-  
-.fab, .fa {
-    font-size: 3vw;
-    color:#fff;
-    padding-right: 2vw;
-}
-
-@media only screen and (max-width: 1000px) { 
-    .fab, .fa {
-        display:flex;
-        font-size: 8vw;
-        color:rgb(243, 238, 238);
-        padding-right:10px;
-    }
-    
-.numele-pizzeriei {
-    text-align: center;
-    margin:0;
-    font-size:8vw; 
-    }
-}
