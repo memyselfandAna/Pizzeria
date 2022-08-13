@@ -32,7 +32,7 @@ html, body {
 
 .nav ul {
     margin: 0;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .nav li {
@@ -48,7 +48,7 @@ html, body {
 
 .main nav {
     text-align: center;
-    font-size: 2.1em;
+    font-size: 4vw;
     font-weight: lighter;
     border-bottom: 1px solid rgba(246, 244, 243, 0.344);
 }
@@ -63,7 +63,7 @@ html, body {
 }
 
 .nav .call-button {
-    font-size: .8em;
+    font-size: 3vw;
     
 }
 
@@ -99,14 +99,14 @@ html, body {
 .numele-pizzeriei {
     text-align: center;
     margin:0;
-    font-size: 4em;
+    font-size: 4vw;
     font-family: "booter - zero zero";
     font-weight: normal;
     color:rgb(244, 242, 248)
 }
 
 .numele-pizzeriei-large {
-    font-size: 10em;
+    font-size: 10vw;
 }
 
 .content-section, .content2-section {
@@ -140,7 +140,7 @@ html, body {
     font-weight: normal;
     color:rgb(101, 14, 14);
     text-align:center;
-    font-size: 2.5em;
+    font-size: 3vw;
 
 }
 
@@ -162,7 +162,7 @@ html, body {
 } 
 
 .main-footer li{
-    padding: 1 .9em;
+    padding:2vw;
 }
 
 .main-footer ul{
@@ -207,7 +207,8 @@ html, body {
 }
 
 .content-section2 {
-    padding: 5% 15%;
+    padding: 5% 5%;
+    margin-left: 0%;
 }
 
 .pizza-row {
@@ -251,7 +252,7 @@ html, body {
     border: none;
     border-radius: .3em;
     font-weight:bold ;
-    font-size: 1em;
+    font-size: 4vw;
 }
 
 .btn-primary:hover {
@@ -294,7 +295,7 @@ html, body {
     display:grid;
     align-items:center;
     padding: 5px;
-    font-size: 30px;
+    font-size: 2vw;
     max-width: 500px;
     min-width: 500px;
 }
@@ -314,7 +315,7 @@ html, body {
 
 .cart-header {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 3vw;
     color: #333;
 }
 
@@ -338,19 +339,19 @@ html, body {
     align-self:baseline;
     text-align:justify;
     /* font-weight: lighter;  */
-    font-size: 1.1em;
+    font-size: 3vw;
     color: #333;
     margin-bottom: 10px;
     padding: 0 10px 0 10px;
 }
 
 .cart-item {
-    width: 65%;
+    width: 60%;
 }
 
 .cart-price {
     width: 15%;
-    font-size: 1.2em;
+    font-size: 3vw;
     color:#333;
 }
 
