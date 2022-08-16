@@ -40,6 +40,7 @@ html, body {
 .nav ul {
     margin: 0;
     font-size: 3vw;
+    padding-left: 2vw;
 }
 
 .nav li {
@@ -321,7 +322,7 @@ html, body {
 }
 
 .cart-item-row {
-    display:flex;;
+    display:flex;
     margin-top: 20px ;
   
 }
