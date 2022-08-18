@@ -71,7 +71,7 @@ html, body {
 }
 
 .nav .call-button > img {
-    font-size: 3vw;
+    width: 4vw;
     
 }
 
@@ -104,7 +104,7 @@ html, body {
 .numele-pizzeriei {
     text-align: center;
     margin:0;
-    font-size: 4vw;
+    font-size: 6vw;
     font-family: "booter - zero zero";
     font-weight: normal;
     color:rgb(244, 242, 248)
@@ -166,6 +166,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 10vw;
 } 
 
 .main-footer li{
@@ -174,11 +175,6 @@ html, body {
 
 .main-footer ul{
     padding: 0px;
-}
-
- .footer-nav img {
-    width: 10vw;
-    /* height: 10vw;      */
 }
 
 .grid {
@@ -576,9 +572,8 @@ figure {
     }
 
     .nav .call-button {
-        font-size: 3vw;
+        font-size: 6vw;
     }
-
     }
 
 
@@ -626,21 +621,37 @@ figure {
     }
   }
 
-@media only screen and (max-width: 1000px) { 
-    .fab .fa {
+@media (max-width: 940px) { 
+    .fab  {
         display:flex;
-        font-size: 8vw;
+        font-size: 7vw;
         color:rgb(243, 238, 238);
         padding-right:10px;
     }
 }
 
 @media only screen and (max-width: 1000px) { 
-    .numele-pizzeriei {
-        text-align: center;
-        margin:0;
-        font-size:8vw; 
+    .numele-pizzeriei { 
+        font-size:10vw; 
     }
+    .numele-pizzeriei-large {
+        font-size: 13vw;   
+    }
+    .nav ul {
+        margin: 0;
+        font-size: 6vw;
+
    }
   
-    
+@media only screen and (max-width: 920px) { 
+    .main-footer {
+        background-image: url("Imagini/Imagine Caramida.jpg");
+        background-size: cover;
+        color: antiquewhite;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 25vw;
+    } 
+}  
