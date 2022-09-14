@@ -5,26 +5,6 @@ else {
     ready()
 }
 
-// const pizze = [
-   
-//     { nume: 'MARGHERITA', price: 20, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'PROSCIUTTO E MAIS', price: 23, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'PROSCIUTTO E FUNGHI', price: 23, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'CAPRICIOSA', price: 24, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'QUATRO STAGIONI', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'QUATRO FORMAGGI', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'NAPOLI', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'TONNO CIPOLA', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'TONNO OLIVE', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'DIAVOLA', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'FANTASIA', price: 26, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'PRIMAVERA', price: 25, img: 'Pizza la pachet.jpeg' },
-//     { nume: 'VEGETARIANA', price: 25, img: 'Pizza la pachet.jpeg' }, 
-//     { nume: 'MARIA', price: 25, img: 'Pizza la pachet.jpeg'},
-//     { nume: 'DELIZIA', price: 26, img: 'Pizza la pachet.jpeg'},
-//     { nume: 'RUSTICA', price: 25, img: 'Pizza la pachet.jpeg' }
-// ]
-
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -56,15 +36,54 @@ function quantityChanged(event) {
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var marcel = cartItemContainer.getElementsByClassName('cart-row')
-    var total = 0
+    var total = 0, bucati = 0
     for (var i = 0; i < marcel.length; i++) {
         var cartRow = marcel[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var resultElement = cartRow.getElementsByClassName('cart-quantity-input-result')[0]
+        var messageElement = cartRow.getElementsByClassName('cart-message')[0]
         var price = parseFloat(priceElement.innerText.replace(' Lei', ''))
-        var quantity = parseInt(quantityElement.value)
+        var quantity = parseInt(quantityElement.value) || 0;
         total = total + (price * quantity)
+        bucati += quantity;
+        if (resultElement) {
+            resultElement.value = price * quantity + ' Lei';
+        }
     }
+    for (var i = 0; i < marcel.length; i++) {
+        var cartRow = marcel[i]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var messageElement = cartRow.getElementsByClassName('cart-message')[0]
+        var quantity = parseInt(quantityElement.value) || 0;
+        if (messageElement) {
+            messageElement.innerText = '';
+            if (quantity > 0) {
+                if (bucati > 2) {
+                    messageElement.innerText = 'Livrarea gratuita!!!';
+                }
+                else {
+                    messageElement.innerText = '+7 lei livrarea';
+                }
+            }
+        }
+    }
+
     total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('cart-total-price')[0].innerText = total + ' Lei';
 }
+
+
+function onClick(img) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+}
+
+function onClose(modal) {
+    modal.style.display = "none";
+  }

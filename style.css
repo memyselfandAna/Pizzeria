@@ -50,7 +50,7 @@ html, body {
 .nav a {
     display: inline-block;
     padding: .5em;
-    color: #eae6f0dd;
+    color: #eae6f0;
     text-decoration:none ;
 }
 
@@ -93,6 +93,17 @@ html, body {
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom:20px;
+}
+
+.main-header p{
+    color:#eae6f0;
+    text-align: center;
+    margin:0;
+    font-size: 4vw;
+    font-family: "booter - zero zero";
+    font-weight: normal;
+    height: 40px;
+    line-height: 59px;
 }
 
 .main-nav {
@@ -194,14 +205,13 @@ html, body {
     cursor: pointer;
 }
 
-.btn-header {
-    margin: .5em 15% 2em 15%;
-    color: white;
-    border: 4px solid rgba(218, 137, 94, 0.789);
-    background-color: rgba(197, 76, 16, 0.305);
-    font-size: 1.5em;
-    font-weight: lighter;
-    border-radius: .3em;
+.section-header {
+    font-family: "metal mania";
+    font-weight: normal;
+    color:rgb(101, 14, 14);
+    text-align:center;
+    font-size: 4vw;
+    margin-bottom: 4vw;
 
 }
 
@@ -369,6 +379,10 @@ figure {
     padding: 5px 5px 5px;
     
     } 
+
+figure > img {
+    cursor: pointer;
+}
  figcaption {
     font-size:large;
 }
@@ -387,17 +401,22 @@ figure {
     align-self: flex-end;
 }
 
-.cart-quantity-input {
-    height: 34px;
-    width: 50px;
-    border-radius: .3em;
+.cart-quantity-input, .cart-quantity-input-result {
+    height: 50px;
+    width: 100px;
+    border-radius: 0.3em;
     border: 2px solid rgba(95, 50, 7, 0.608);
     background-color: bisque;
     color: #333;
     padding: 0;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-right: 25px;
+}
+
+.cart-message {
+    color: rgb(101, 14, 14);
+    font-weight: bold;
 }
 
 .cart-row:last-child {
@@ -459,33 +478,40 @@ figure {
     text-align: center;
     top: 8rem;
     margin: 0 auto;
-    color: #a1816c;
-    text-shadow: 1px 1px 2px #d555;
-  }
+    color: #351a09;
+    text-shadow: 1px 1px 2px rgba(44, 25, 25, 0.333);
+    background-color: rgba(246, 244, 243, 0.644);
+    border-radius: 15%;
+}
 
   
-.container-sticky-3 {
+/* .container-sticky-3 {
     display: flex;
     position: sticky;
-    /* width: 15%; */
+
     text-align: center;
     font-weight: bold;
     font-size: small;
     top: 5rem;
     float: right;
-    /* align-self: flex-end; */
     color: #a1816c;
+    text-shadow: 1px 1px 2px #d555;
+  }*/
+
+  .container-sticky-4 {
+    display: grid;
+    position: sticky;
+    text-align: center;
+    bottom: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #a1816c;
+    justify-content: end;
     text-shadow: 1px 1px 2px #d555;
   }
 
-  .container-sticky-4 {
-    display: flex;
-    position: sticky;
-    text-align: center;
-    top: 4rem;
-    float: left;
-    color: #a1816c;
-    text-shadow: 1px 1px 2px #d555;
+  .container-sticky-4 p {
+    margin: 0;
   }
 
   a {
@@ -527,7 +553,10 @@ figure {
         font-size: 15px;
     }
 
-    
+    .cart-quantity-input, .cart-quantity-input-result {
+        width: 100%;
+    }
+
     .grid {
         display: inherit;
         margin-top: 0px;
@@ -577,7 +606,7 @@ figure {
     }
 
 
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
     .container-sticky-4 {
         display:flex; 
         position: sticky;
@@ -588,18 +617,9 @@ figure {
         float: right;
         color: #a1816c;
         text-shadow: 1px 1px 2px #d555
-    }
+    } */
 
-    .container-sticky-4 > p {
-        position:fixed;
-        top: 30rem;
-        margin-block-start:1px;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-    }
-}
-
+     /*  */
 @media (min-width: 40em) {
     /* Bump up size of carousel content */
     .carousel-caption p {
@@ -654,4 +674,76 @@ figure {
         justify-content: space-between;
         height: 25vw;
     } 
-}  
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+    /* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    font-size: x-large;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
