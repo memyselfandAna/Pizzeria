@@ -63,7 +63,7 @@ function updateCartTotal() {
                     messageElement.innerText = 'Livrarea gratuita!!!';
                 }
                 else {
-                    messageElement.innerText = '+7 lei livrarea';
+                    messageElement.innerText = '+10 lei livrarea';
                 }
             }
         }
